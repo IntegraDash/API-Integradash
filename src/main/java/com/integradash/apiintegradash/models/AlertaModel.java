@@ -28,5 +28,8 @@ public class AlertaModel {
     private String status_alerta;
     private String descricao_alerta;
 
+    @OneToOne
+    @JoinColumn(name = "id_erro", referencedColumnName = "id")
+    private ErroModel erro;
 
 }
