@@ -28,9 +28,9 @@ public class UsuarioModel implements Serializable {
 
     // private String url_img;
 
-    @OneToMany
-    @JoinColumn(name = "id_estrategia", referencedColumnName = "id")
-    private EstrategiaModel estrategia;
+//    @OneToMany
+//    @JoinColumn(name = "id_estrategia", referencedColumnName = "id")
+//    private EstrategiaModel estrategia;
 
 
 

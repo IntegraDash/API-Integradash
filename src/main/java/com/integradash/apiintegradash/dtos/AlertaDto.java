@@ -4,12 +4,18 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 
+
+import java.util.Date;
+
 public record AlertaDto(
-        @NotBlank String nome_alerta,
+        @NotBlank String nomealerta,
         @NotBlank String nivel_criticidade ,
-        @NotBlank String data_alerta, //datetime alterar
+
+        @NotBlank @DateTimeFormat(pattern="dd/MM/yyyy") Date data_alerta,
+
         @NotBlank String status_alerta,
         @NotBlank String descricao_alerta
 
+//        @NotBlank @DateTimeFormat Date data_alerta, //datetime alterar
 ) {
 }

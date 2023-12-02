@@ -39,7 +39,7 @@ public class AlertaController {
 
     @PostMapping
     public ResponseEntity<Object> cadastrarAlerta(@RequestBody @Valid AlertaDto alertaDto) {
-        if ( alertaRepository.findByNomeAlerta(alertaDto.nome_alerta()) != null ) {
+        if ( alertaRepository.findBynomealerta(alertaDto.nomealerta()) != null ) {
             // Não pode cadastrar
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Esse alerta já está cadastrado");
         }
